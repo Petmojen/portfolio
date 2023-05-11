@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>Oskar's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="basic" id="bio"> <!-- BIO -->
+    <div class="center">
+      <h1>Oskar</h1>
+      <div class="gamesList">
+        <h2>Games</h2>
+        <ul>
+          <li><button onclick="SelectGame(playtimeTD)">PlaytimeTD</button></li>
+          <li><button onclick="SelectGame(lumberman)">Lumberman</button></li>
+          <li><button onclick="">Astronought</button></li>
+        </ul>
+        <ul>
+          <li><button onclick="">Tower of Aour</button></li>
+          <li><button onclick="">Cycles:Reborn</button></li>
+          <li><button onclick="">Bag of Rocks Eats Scissors</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="basic" id="playtimeTD"> <!-- Playtime TD -->
+    <div class="center">
+      <img class="titlecard" src="images/PlaytimeTD/titlecard.png">
+      <div class="slider">
+        <div id="playtimeSliderPhotos">
+          <iframe src="https://www.youtube.com/embed/g6SrPVTMRe8" allowfullscreen></iframe>
+          <image src="images/PlaytimeTD/sliderPhotos/playtime0.png">
+        </div>
+        <p id="playtimeSliderCurrentNumber"></p>
+        <button class="backButton" onclick="Back(playtimeSliderList)"></button>
+        <button class="nextButton" onclick="Next(playtimeSliderList)"></button>
+      </div>
+      <ul>
+        <li>Summary: </li>
+        <li>Development Time:</li>
+        <li>Game Engine: Unity</li>
+        <li>Other Tools: Visual Studio, Github Desktop, Oculus Quest2</li>
+        <li>Group Size</li>
+        <li>Role</li>
+        <li>What I worked with</li>
+      </ul> <!-- Playtime bio -->
+    </div>
+  </div>
+  <div class="basic" id="lumberman"> <!-- Lumberman Dungeon -->
+    <div class="center">
+      <img class="titlecard" src="images/Lumberman/titlecard.png">
+      <div class="slider">
+        <div id="lumbermanSliderPhotos">
+          <iframe src="https://www.youtube.com/embed/7usCimcFDhw" allowfullscreen ></iframe>
+          <image src="images/Lumberman/SliderPhotos/lumberman0.png">
+          <image src="images/Lumberman/SliderPhotos/lumberman1.png">
+          <image src="images/Lumberman/SliderPhotos/lumberman2.png">
+          <image src="images/Lumberman/SliderPhotos/lumberman3.png">
+          <image src="images/Lumberman/SliderPhotos/lumberman4.png">
+          <image src="images/Lumberman/SliderPhotos/lumberman5.png">
+        </div>
+        <p id="lumbermanSliderCurrentNumber"></p>
+        <button class="backButton" onclick="Back(lumbermanSliderList)"></button>
+        <button class="nextButton" onclick="Next(lumbermanSliderList)"></button>
+      </div>
+      <ul>
+        <li>Summary: Play as an axe throwing dwarf in a top-down dungeon crawler.
+          4 stages of boss fighting with resource gathering inbetween.</li>
+        <li>Development Time: 7 Weeks</li>
+        <li>Game Engine: Unity</li>
+        <li>Other Tools: Visual Studio, Github Desktop</li>
+        <li>Group Size</li>
+        <li>Role</li>
+        <li>What I worked with</li>
+      </ul> <!-- Lumberman bio -->
+    </div>
+  </div>
+  <!-- -->
+  <div class="basic">
+    <h1>Test</h1>
+  </div>
+
+<script src="slider.js"></script>
+<script src="gameselector.js"></script>

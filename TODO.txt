@@ -1,0 +1,19 @@
+Add games to list
+  - Playtime TD -
+  - Lumberman dungeon -
+  - Cycles:Reborn -
+  - Bag Of Rocks Eats Scissors  -
+  - Astronought -
+  - Tower of Aour -
+
+
+Game info
+  - Small bio
+  - Development Time
+  - Game engine used + other tools
+  - My role
+  - Simple info on what I did on the project
+
+
+Style
+  - Redo so it looks like an editor
