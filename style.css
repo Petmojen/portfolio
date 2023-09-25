@@ -1,176 +1,193 @@
-/* Base #36353A */
-/* Background #3C3B3C */
-/* Content background #29292A */
-/* Base content font #969179 */
-/* content font #28292D */
-
-/* Fonts */
-@font-face {
-  font-family: 'PlaytimeFont';
-  src: url(fonts/handwrited.ttf);
-}
-
-@font-face {
-  font-family: 'LumberManFont';
-  src: url(fonts/alagard.ttf);
-}
-
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-  height: 100%;
+    min-height: 100vh;
 }
 
 body {
-  background-color: #3C3B3C;
-  height: 100%;
+    background-image: url(images/BackgroundPrick.png);
+    background-color: black;
+    height: 100%;
 }
 
-/* General Style */
-.basic h1, .basic h2, .basic p, .basic li {
-  color: #B0B497;
+/* Page style */
+.centerPage {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
 }
 
-.basic {
-  /* box-shadow: inset 0px 60px 60px -50px rgba(0, 0, 0, .5),
-              inset 0px -80px 60px -60px rgba(0, 0, 0, .5); */
-  width: 100%;
+.contentBorder {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0 40px 15px purple;
+    border-right: 2px solid purple;
+    border-left: 2px solid purple;
+    max-width: 960px;
 }
 
+.contentBorder>div {
+    min-height: 100vh;
+}
+
+/* Basic */
+.basic ul {
+    list-style: none;
+}
+
+h1, h2, p, li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.basic .titlecard {
+    max-width: 960px;
+}
+
+.basic .gameBio {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.basic .gameBio li {
+    margin-top: 5px;
+}
+
+/* Info Button & Box */
+.infoButton {
+    text-align: center;
+}
+
+.infoButton button {
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.infoButton button img {
+    margin-top: 10px;
+    max-width: 30px;
+}
+
+.infoBox {
+    border: 1px white solid;
+    width: 100%;
+}
+
+/* Slider */
 .slider {
-  background-color: rgba(0, 0, 0, .8);
-  position: relative;
-  text-align: center;
-  width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .slider button {
-  position: absolute;
-  cursor: pointer;
-  border: none;
-  height: 40px;
-  width: 40px;
-  top: 50%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    width: 40px;
+    top: 50%;
 }
 
 .slider button:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
 }
 
 .slider .backButton {
-  background-image: url(images/icon/arrowLeft.png);
-  background-color: rgba(0, 0, 0, 0);
-  background-size: contain;
-  left: 5%;
+    background-image: url(images/icon/arrowLeft.png);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: contain;
+    left: 5%;
 }
 
 .slider .nextButton {
-  background-image: url(images/icon/arrowRight.png);
-  background-color: rgba(0, 0, 0, 0);
-  background-size: contain;
-  right: 5%;
+    background-image: url(images/icon/arrowRight.png);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: contain;
+    right: 5%;
 }
 
 .slider img {
-  max-width: 720px;
+    max-width: 720px;
 }
 
 .slider iframe {
-  min-height: 405px;
-  min-width: 720px;
-  border: none;
+    min-height: 405px;
+    min-width: 720px;
+    border: none;
 }
 
-.center {
-  margin: auto;
-  width: 960px;
-}
-
-ul {
-  background-color: rgba(0, 0, 0, .8);
-  list-style: none;
-  max-width: 960px;
-}
-
-li {
-  margin-top: 5px;
-}
-
-/* BIO */
-#bio h1, #bio p, #bio li {
-  color: white;
-}
-
+/* Bio */
 #bio {
-  text-align: center;
-  position: relative;
-  height: 90%;
+    height: 100%;
+}
+
+#bio h1, #bio h2 {
+    text-align: center;
+}
+
+#bio .introductionText {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#bio .contactInfo {
+    text-align: center;
+    margin-top: 15%;
+    font-size: 16px;
 }
 
 #bio .gamesList {
-  position: absolute;
-  bottom: 0;
-  width: 960px;
-  height: 450px;
+    position: absolute;
+    text-align: center;
+    height: 450px;
+    width: 960px;
+    bottom: 0;
 }
 
 #bio ul {
-  height: calc(95% / 2);
-  width: 100%;
+    height: calc(95% / 2);
+    list-style: none;
 }
 
 #bio li {
-  width: calc(100% / 3);
-  height: 100%;
-  float: left;
-  margin: 0;
+    width: calc(100% / 3);
+    height: 100%;
+    float: left;
+    margin: 0;
 }
 
 #bio li button {
-  height: 95%;
-  width: 95%;
+    background-color: black;
+    border: 4px white solid;
+    border-radius: 7%;
+    font-size: 36px;
+    color: white;
+    height: 95%;
+    width: 95%;
 }
 
-/* GameList */
-.gamesList ul {
-  background: rgba(0, 0, 0, 0);
+#bio li button:hover {
+    background-color: rgba(128, 0, 128, 0.5);
 }
 
-/* PlaytimeTD Style */
-#playtimeTD h1, #playtimeTD p, #playtimeTD li {
-  /* font-family: PlaytimeFont; */
-  color: white;
+/* Lumberman */
+#lumberman .gameBio {
+    margin-bottom: 200px;
 }
 
-#playtimeTD {
-  /* background-image: url(images/PlaytimeTD/sliderPhotos/playtime0.png); */
-  background-repeat: repeat;
-  background-position: 50% 0;
-  height: 125%;
-}
-
-#playtimeTD .titlecard {
-  max-width: 960px;
-}
-
-/* Lumberman Style */
-#lumberman h1, #lumberman p, #lumberman li {
-  /* font-family: LumberManFont; */
-  color: white;
-}
-
-#lumberman {
-  /* background-image: url(images/Lumberman/WXaLuz.png); */
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  height: 200%;
-}
-
-#lumberman .titlecard {
-  box-shadow: 0px 2px 4px 0px black;
-  max-width: 960px;
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 16px;
 }

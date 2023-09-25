@@ -1,84 +1,231 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <title>Oskar's Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Oskar's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div class="basic" id="bio"> <!-- BIO -->
-    <div class="center">
-      <h1>Oskar</h1>
-      <h2>BIO</h2>
-      <div class="gamesList">
-        <h2>Projects</h2>
-        <ul>
-          <li><button onclick="SelectGame(playtimeTD)">PlaytimeTD</button></li>
-          <li><button onclick="SelectGame(lumberman)">Lumberman</button></li>
-          <li><button onclick="">Astronought</button></li>
-        </ul>
-        <ul>
-          <li><button onclick="">Tower of Aour</button></li>
-          <li><button onclick="">Cycles:Reborn</button></li>
-          <li><button onclick="">Bag of Rocks Eats Scissors</button></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="basic" id="playtimeTD"> <!-- Playtime TD -->
-    <div class="center">
-      <img class="titlecard" src="images/PlaytimeTD/titlecard.png">
-      <div class="slider">
-        <div id="playtimeSliderPhotos">
-          <iframe src="https://www.youtube.com/embed/g6SrPVTMRe8" allowfullscreen></iframe>
-          <image src="images/PlaytimeTD/sliderPhotos/playtime0.png">
+    <div class="centerPage">
+        <div class="contentBorder">
+            <div class="basic" id="bio"> <!-- Bio -->
+                <h1>About</h1>
+                <p class="introductionText">Hello! My name is Oskar and I am a 23 year old graduate from YRGO, 
+                    a Vocational College in Gothenburg. I studied Game Development with the focus on programming.
+                    While there we mainly worked with Unity and C#, making pc games. 
+                    But we also made Online Mobile games, VR games and touched Unreal 4 (Blueprints).</p>
+                <p class="introductionText">In my spare time I tend to soak up movies, series and music all while I
+                    play games.
+                    I also play some guitar and learn other instruments. Sometimes I get wierd ideas I want to make
+                    and use a variety of software and coding languages, just to make my friends laugh.
+                </p>
+                <p class="contactInfo">Contact me at: Oskar.n00@ownit.nu</p>
+                <div class="gamesList">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><button onclick="SelectGame(playtimeTD)">PlaytimeTD</button></li>
+                        <li><button onclick="SelectGame(lumberman)">Lumberman</button></li>
+                        <li><button onclick="SelectGame(astronought)">Astronought</button></li>
+                    </ul>
+                    <ul>
+                        <li><button onclick="SelectGame(towerOA)">Tower of Aour</button></li>
+                        <li><button onclick="SelectGame(cycles)">Cycles:Reborn</button></li>
+                        <li><button onclick="SelectGame(bagOf)">Bag of Rocks Eats Scissors</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="basic" id="playtimeTD"> <!-- Playtime TD -->
+                <a href="https://yrgo-game-creator.itch.io/playtime-td" target="_blank"><img class="titlecard" src="images/PlaytimeTD/titlecard.png"></a> <!-- Title Card-->
+                <div class="slider"> <!-- Photo Slider -->
+                    <div id="playtimeSliderPhotos">
+                        <iframe src="https://www.youtube.com/embed/g6SrPVTMRe8" allowfullscreen></iframe>
+                        <img src="images/PlaytimeTD/sliderPhotos/playtime0.png" style="display: none;">
+                    </div>
+                    <p id="playtimeSliderCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(playtimeSliderList)"></button>
+                    <button class="nextButton" onclick="Next(playtimeSliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Playtime bio -->
+                    <li><b>Role:</b> Programmer</li>
+                    <li><b>Engine:</b> UNITY</li>
+                    <li><b>Other Tools:</b> Visual Studio, Github Desktop, Oculus Quest 2</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>VR Controller Input and Interactability. 
+                        Picking up battle towers for a cost and manipulating them. 
+                        When defeating enemies they drop currency.</li>
+                    <div class="infoBox" id="playtimeInfoBox">
+                        <li>Development Time: 5 Weeks</li>
+                        <li>Group Size: 7 (3 Programmers, 4 Artists)</li>
+                        <li>Summary: Childhood was a simpler time. Now you can relive those days of playing with your toys in Playtime TD, 
+                            a small VR experience with a touch of horror. If you place your toys strategically, 
+                            they may be able to defend your King from the evil office-supplies.</li>
+                        <li>Link: <a href="https://yrgo-game-creator.itch.io/playtime-td" target="_blank">Itchi.io</a></li>
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(playtimeInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul>
+            </div>
+            <div class="basic" id="lumberman"> <!-- Lumberman Dungeon -->
+                <a href="https://yrgo-game-creator.itch.io/lumberman-dungeon" target="_blank"><img class="titlecard" src="images/Lumberman/titlecard.png"></a>
+                <div class="slider">
+                    <div id="lumbermanSliderPhotos">
+                        <iframe src="https://www.youtube.com/embed/7usCimcFDhw" allowfullscreen></iframe>
+                        <img src="images/Lumberman/SliderPhotos/lumberman0.png">
+                        <img src="images/Lumberman/SliderPhotos/lumberman1.png">
+                        <img src="images/Lumberman/SliderPhotos/lumberman2.png">
+                        <img src="images/Lumberman/SliderPhotos/lumberman3.png">
+                        <img src="images/Lumberman/SliderPhotos/lumberman4.png">
+                        <img src="images/Lumberman/SliderPhotos/lumberman5.png">
+                    </div>
+                    <p id="lumbermanSliderCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(lumbermanSliderList)"></button>
+                    <button class="nextButton" onclick="Next(lumbermanSliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Lumberman bio -->
+                    <li><b>Role:</b> Lead Programmer</li>
+                    <li><b>Engine:</b> UNITY</li>
+                    <li><b>Other Tools:</b> Visual Studio, Github Desktop</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>Coding the animation, player movement, player attacks. Inventory system and map items.
+                         Boss animations (coding), everything surrounding the minions. UI functions.</li>
+                    <div class="infoBox" id="lumbermanInfoBox">
+                        <li>Development Time: 7 Weeks</li>
+                        <li>Group Size: 6 (3 Programmers, 3 Artists)</li>
+                        <li>Summary: After falling down a hole and waking up in an old abandoned dungeon. Play as an axe throwing dwarf in a top-down dungeon crawler.
+                            4 stages of boss fighting with resource gathering inbetween, in the goal of getting to the surface.</li>
+                        <li>Link: <a href="https://yrgo-game-creator.itch.io/playtime-td" target="_blank">Itchi.io</a></li>
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(lumbermanInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul> 
+            </div>
+            <div class="basic" id="astronought"> <!-- Astronought -->
+                <img class="titlecard" src="images/Astronought/Astronought.png">
+                <div class="slider">
+                    <div id="astronoughtSliderPhotos">
+                        <img src="images/Astronought/SliderPhotos/astronought0.PNG">
+                        <img src="images/Astronought/SliderPhotos/astronought1.PNG">
+                        <img src="images/Astronought/SliderPhotos/astronought2.PNG">
+                        <img src="images/Astronought/SliderPhotos/astronought3.PNG">
+                        <img src="images/Astronought/SliderPhotos/astronought4.PNG">
+                    </div>
+                    <p id="astronoughtSliderCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(astronoughtSliderList)"></button>
+                    <button class="nextButton" onclick="Next(astronoughtSliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Astronought bio -->
+                    <li><b>Role:</b> Programmer</li>
+                    <li><b>Engine:</b> GameMaker</li>
+                    <li><b>Other Tools:</b> Github Desktop</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>Player movement, player attacks, player animation (coding). UI functions, menu functions.
+                        Boss animations (coding), and boss battle phase. Local saved highscore.</li>
+                    <div class="infoBox" id="astronoughtInfoBox">
+                        <li>Development Time: 1 Week</li>
+                        <li>Group Size: 5 (2 Programmers, 3 Artists)</li>
+                        <li>Summary: Hunted by an enemy space frigate, your starship is shot down.
+                            Fight for you life in your spacesuit against enemy spaceships and destroy the space frigate.</li>
+                    
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(astronoughtInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul>
+            </div>
+            <div class="basic" id="towerOA"> <!-- Tower of Aour -->
+                <a href="https://yrgo-game-creator.itch.io/tower-of-aour" target="_blank"><img class="titlecard" src="images/Tower Of Aour/titlecard.png"></a>
+                <div class="slider">
+                    <div id="towerOASliderPhotos">
+                        <iframe src="https://www.youtube.com/embed/8OuwDojdGRs" allowfullscreen></iframe>
+                        <img src="images/Tower Of Aour/SliderPhotos/towerOA0.png">
+                        <img src="images/Tower Of Aour/SliderPhotos/towerOA1.png">
+                        <img src="images/Tower Of Aour/SliderPhotos/towerOA2.png">
+                    </div>
+                    <p id="towerOASliderCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(towerOASliderList)"></button>
+                    <button class="nextButton" onclick="Next(towerOASliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Tower of Aour bio -->
+                    <li><b>Role:</b> Programmer</li>
+                    <li><b>Engine:</b> UNITY</li>
+                    <li><b>Other Tools:</b> Visual Studio, Github Desktop</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>Player movement, player animation (coding). UI functions, menu functions, dialogue box.
+                        Object interactions (doors, levers, elevators, ladders, keys, boxes). Time freeze ability. Map functions.</li>
+                    <div class="infoBox" id="towerOAInfoBox">
+                        <li>Development Time: 7 Weeks</li>
+                        <li>Group Size: 7 (3 Programmers, 4 Artists)</li>
+                        <li>Sumamry: Follow the watchmaker, Master Uhu’s apprentice, 
+                            Julius Time on the journey to restore the old clock tower. 
+                            Solve puzzles, collect and restore components, climb, pull, 
+                            slide and bring out the best of your environment! </li>
+                        <li>Link: <a href="https://yrgo-game-creator.itch.io/tower-of-aour" target="_blank">Itchi.io</a></li>
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(towerOAInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul>
+            </div>
+            <div class="basic" id="cycles"> <!-- Cycles:Reborn -->
+                <a href="https://iamrohr.itch.io/cyclesreborn" target="_blank"><img class="titlecard" src="images/Cycles/titlecard.png"></a>
+                <div class="slider">
+                    <div id="cyclesSliderPhotos">
+                        <iframe src="https://www.youtube.com/embed/QVwBrJStcpE" allowfullscreen></iframe>
+                        <img src="images/Cycles/SliderPhotos/cycles0.gif">
+                        <img src="images/Cycles/SliderPhotos/cycles1.gif">
+                        <img src="images/Cycles/SliderPhotos/cycles2.gif">
+                    </div>
+                    <p id="cyclesCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(cyclesSliderList)"></button>
+                    <button class="nextButton" onclick="Next(cyclesSliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Cycles:Reborn bio -->
+                    <li><b>Role:</b> Programmer</li>
+                    <li><b>Engine:</b> UNITY</li>
+                    <li><b>Other Tools:</b> Visual Studio, Github Desktop</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>Menu functions, menu animations</li>
+                    <div class="infoBox" id="cyclesInfoBox">
+                        <li>Development Time: 2 Days (Game Jam)</li>
+                        <li>Group Size: 3 (3 Programmers)</li>
+                        <li>Summary: Keep the cycle going by keeping a perfect balance.</li>
+                        <li>Link: <a href="https://iamrohr.itch.io/cyclesreborn" target="_blank">Itchi.io</a></li>
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(cyclesInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul>
+            </div>
+            <div class="basic" id="bagOf"> <!-- Bag of Rocks Eats Scissors -->
+                <img class="titlecard" src="images/BagOfRocksEatsScissors/titlecard.png">
+                <div class="slider">
+                    <div id="bagOfSliderPhotos">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf0.png">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf1.png">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf2.png">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf3.png">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf4.png">
+                        <img src="images/BagOfRocksEatsScissors/SliderPhotos/bagOf5.png">
+                    </div>
+                    <p id="bagOfCurrentNumber"></p>
+                    <button class="backButton" onclick="Back(bagOfSliderList)"></button>
+                    <button class="nextButton" onclick="Next(bagOfSliderList)"></button>
+                </div>
+                <ul class="gameBio"> <!-- Bag of Rocks Eats Scissors bio -->
+                    <li><b>Role:</b> Sole Developer</li>
+                    <li><b>Engine:</b> UNITY</li>
+                    <li><b>Other Tools:</b> Visual Studio, Firebase, Android Phone</li>
+                    <li><b>What I Worked With -</b></li>
+                    <li>Database management (creating, uploading & fetching data). 
+                        Online game room creation. Character creation, keyframe animation.
+                        Menu functions, UI functions.</li>
+                    <div class="infoBox" id="bagOfInfoBox">
+                        <li>Development Time: 3 Weeks</li>
+                        <li>Group Size: 1</li>
+                        <li>Summary: It's finally break time! But playing Rock Paper Scissors is getting old.
+                            Why not challenge your classmates in a stickman death battle? 
+                            Using the rules and outcomes of Rock Paper Scissors of course.
+                        </li>
+                    </div>
+                    <li class="infoButton"><button onclick="ExpandInfoBox(bagOfInfoBox, this)"><img src="images/Icon/InformationButton.png"></button></li>
+                </ul>
+            </div>
+            <footer><p>Contact me at: Oskar.n00@ownit.nu</p></footer>
         </div>
-        <p id="playtimeSliderCurrentNumber"></p>
-        <button class="backButton" onclick="Back(playtimeSliderList)"></button>
-        <button class="nextButton" onclick="Next(playtimeSliderList)"></button>
-      </div>
-      <ul>
-        <li>Summary: </li>
-        <li>Development Time:</li>
-        <li>Game Engine: Unity</li>
-        <li>Other Tools: Visual Studio, Github Desktop, Oculus Quest2</li>
-        <li>Group Size</li>
-        <li>Role</li>
-        <li>What I worked with</li>
-      </ul> <!-- Playtime bio -->
     </div>
-  </div>
-  <div class="basic" id="lumberman"> <!-- Lumberman Dungeon -->
-    <div class="center">
-      <img class="titlecard" src="images/Lumberman/titlecard.png">
-      <div class="slider">
-        <div id="lumbermanSliderPhotos">
-          <iframe src="https://www.youtube.com/embed/7usCimcFDhw" allowfullscreen ></iframe>
-          <image src="images/Lumberman/SliderPhotos/lumberman0.png">
-          <image src="images/Lumberman/SliderPhotos/lumberman1.png">
-          <image src="images/Lumberman/SliderPhotos/lumberman2.png">
-          <image src="images/Lumberman/SliderPhotos/lumberman3.png">
-          <image src="images/Lumberman/SliderPhotos/lumberman4.png">
-          <image src="images/Lumberman/SliderPhotos/lumberman5.png">
-        </div>
-        <p id="lumbermanSliderCurrentNumber"></p>
-        <button class="backButton" onclick="Back(lumbermanSliderList)"></button>
-        <button class="nextButton" onclick="Next(lumbermanSliderList)"></button>
-      </div>
-      <ul>
-        <li>Summary: Play as an axe throwing dwarf in a top-down dungeon crawler.
-          4 stages of boss fighting with resource gathering inbetween.</li>
-        <li>Development Time: 7 Weeks</li>
-        <li>Game Engine: Unity</li>
-        <li>Other Tools: Visual Studio, Github Desktop</li>
-        <li>Group Size</li>
-        <li>Role</li>
-        <li>What I worked with</li>
-      </ul> <!-- Lumberman bio -->
-    </div>
-  </div>
-  <!-- -->
-  <div class="basic">
-    <h1>Test</h1>
-  </div>
-
-<script src="slider.js"></script>
-<script src="gameselector.js"></script>
+    <script src="gameselector.js"></script>
+    <script src="expandinfo.js"></script>
+    <script src="slider.js"></script>
+</body>
+</html>
