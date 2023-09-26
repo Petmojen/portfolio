@@ -144,7 +144,7 @@ h1, h2, p, li {
 #bio .contactInfo {
     text-align: center;
     margin-top: 15%;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 #bio .gamesList {
@@ -172,13 +172,40 @@ h1, h2, p, li {
     border: 4px white solid;
     border-radius: 7%;
     font-size: 36px;
+    cursor: pointer;
     color: white;
     height: 95%;
     width: 95%;
 }
 
 #bio li button:hover {
-    background-color: rgba(128, 0, 128, 0.5);
+    border: 4px rgba(128, 0, 128, 0.5) solid;
+    color: purple;
+}
+
+/* Bio buttons background */
+#bio .gamesList .PlaytimeTD {
+    background-image: url(images/PlaytimeTD/sliderPhotos/playtime0.png);
+}
+
+#bio .gamesList .Lumberman {
+    background-image: url(images/Lumberman/buttonBackground.png);
+}
+
+#bio .gamesList .Astronought {
+    background-image: url(images/Astronought/buttonBackground.png);
+}
+
+#bio .gamesList .towerOA {
+    background-image: url(images/TowerOfAour/buttonBackground.png);
+}
+
+#bio .gamesList .cycles {
+    background-image: url(images/Cycles/SliderPhotos/cycles0.gif);
+}
+
+#bio .gamesList .bagOf {
+    background-image: url(images/BagOfRocksEatsScissors/SliderPhotos/bagOf1.png);
 }
 
 /* Lumberman */
@@ -189,5 +216,5 @@ h1, h2, p, li {
 /* Footer */
 footer {
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
 }
