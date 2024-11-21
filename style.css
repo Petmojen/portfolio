@@ -253,13 +253,13 @@ footer {
     }
 
     #bio .gamesList {
-        height: 350px;
+        height: 300px;
         width: 100%;
         bottom: 0px;
     }
     
     #bio ul {
-        height: calc(93% / 2);
+        height: calc(92% / 2);
     }
     
     #bio li {
